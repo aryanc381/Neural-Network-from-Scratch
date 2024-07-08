@@ -62,4 +62,14 @@ In this project, I have hardcoded a neural network to classify handwritten digit
 3. **a2** - Softmax(z2)
 
 **- def one_hot(y) :**
-1. 
+1. **Functionality** - Converts a categorical array into its one-hot encoded representation.
+2. **Initialization: np.zeros((y.size, y.max() + 1))** - Creates a matrix one_hot_y of zeros with dimensions (y.size, y.max() + 1), here y is the number of elements and y.max() + 1 is the number of columns represents maximum value of y plus one.
+3. **Setting Indices: one_hot_y[np.arange(y.size), y] = 1** - Creates an array of indices from 0 to y.size-1, y is used as indices along the second axis of one_hot_y.
+4. **Transpose: one_hot_y = one_hot_y.T** - Transposes one_hot_y to make the one-hot encoded vectors (1s and 0s) aligned as rows, with each row representing a class and each column representing an instance.
+5. **Binary Representation** - One-hot encoding converts categorical variables into a binary matrix where each column corresponds to a unique category and each row represents an instance.
+6. **Usage** - This representation is commonly used in machine learning tasks, especially for multi-class classification where algorithms require inputs in numerical format.
+
+**- def deriv_ReLU(z) :**
+1. **Derivative** - returns z when z > 0.
+
+
