@@ -56,3 +56,10 @@ In this project, I have hardcoded a neural network to classify handwritten digit
 5. **Output Range** - The output range is from 0 - 1 making it suitable for multi-class classification tasks.
 6. **Usage** - Softmax function is used in backprop.
 
+**- def forward_prop(w1, b1, w2, b2, x) :**
+1. **z1, z2** - Linear Activation function : w.x + b
+2. **a1** - ReLU(z1)
+3. **a2** - Softmax(z2)
+
+**- def one_hot(y) :**
+1. 
