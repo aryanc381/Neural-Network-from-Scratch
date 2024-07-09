@@ -72,4 +72,31 @@ In this project, I have hardcoded a neural network to classify handwritten digit
 **- def deriv_ReLU(z) :**
 1. **Derivative** - returns z when z > 0.
 
+**- def def back_prop(z1, a1, z2, a2, w2, x, y) :**
+1. **Function** - Computes the gradient descent in the neural network by the weights and biases created by forward prop.
+2. **Error Propagation** - Backpropagation propagates the error from the output layer back through the network to compute gradients for each layer's weights and biases.
+3. **Gradient Calculation** - Using the chain rule, it calculates how changes in weights and biases affect the loss function, allowing the network to update its parameters to minimize the loss.
 
+**def update_params(w1, b1, w2, b2, dw1, db1, dw2, db2, alpha) :**
+1. **Function** - With the help of gradient descent, updating the parameters using alpha rate.
+
+**def get_predictions(a2) :**
+1. **Function** - Getting the predictions using the highest probability available in the zeroth axis.
+
+**def get_accuracy(predictions, y) :**
+1. **Function** - Determines the accuracy of the function by comparing the actual value 'y' with the predicted value 'y_hat'.
+
+**def gradient_descent(x, y, iterations, alpha) :**
+1. **Function** - Computing the gradient descent to achieve the global minimum.
+2. **Delta W** - (w - alpha*dw/dz) : for weights.
+3. **Delta b** - (b - alpha*db/dz) : for bias.
+4. **Computation** - For every 50 iterations, the accuracy is printed for conclusion. (In code, 1000 iterations give 91.83% accuracy to the model). In tensorflow, these are epochs.
+5. **Workflow** - Forward_prop() -> Back_prop() -> update_params().
+
+**- def test_prediction(index, w1, b1, w2, b2) :**
+1. **Display** - After the predictions have been made, the label and the predictions are displayed using this function.
+2. **Plot** - The last 4 lines of code use matplotlib to show the handwritten image to cross-verify with the label.
+
+## References : 
+1. [Concept](https://www.youtube.com/watch?v=aircAruvnKk&t=812s&ab_channel=3Blue1Brown)
+2. [Math behind ML and Neural Networks](https://www.youtube.com/playlist?list=PLKnIA16_Rmvbr7zKYQuBfsVkjoLcJgxHH)
